@@ -1,0 +1,5 @@
+﻿<Project>
+  <PropertyGroup>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+</Project>

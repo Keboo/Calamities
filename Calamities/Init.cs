@@ -4,7 +4,7 @@ class Init
     [ModuleInitializer]
     internal static void ModuleInitializer()
     {
-        var v = new(); //Ensure var is initialized
+        _ = new var().ToString(); //Ensure string used in var.ToString() is initialized
         const string name = "Bob";
         const string newName = "Joe";
 
