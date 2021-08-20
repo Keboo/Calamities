@@ -1,11 +1,11 @@
 ﻿
 class var
 {
-    private string _originalValue;
+    //private string _originalValue;
 
-    public static implicit operator var(string str)
+    public static implicit operator var(string _)
     {
-        return new var() { _originalValue = str };
+        return new var();
     }
 
     public override string ToString() => "Bob";

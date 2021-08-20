@@ -2,11 +2,11 @@
 {
     class String
     {
-        private string _originalValue;
+        //private string _originalValue;
 
-        public static implicit operator String(string str)
+        public static implicit operator String(string _)
         {
-            return new String() { _originalValue = str };
+            return new String();
         }
 
         public static implicit operator string(String _)

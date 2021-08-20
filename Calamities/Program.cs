@@ -19,10 +19,6 @@ namespace Calamities
                 (days, months, years) = age;
                 Console.WriteLine($"{name} you are {years} years, {months} months, and {days} days old");
             }
-            else
-            {
-                Console.Error.WriteLine("Failed to parse birthday");
-            }
         }
     }
 }
