@@ -1,15 +1,17 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Calamities
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Please enter your name");
+            await Logger.WriteLineAsync($"Please enter your name");
             var name = Console.ReadLine();
+            await Logger.WriteLineAsync($"Hi {name}");
 
-            Console.WriteLine("Please enter your birthday");
+            await Logger.WriteLineAsync($"Please enter your birthday");
             String birthday = Console.ReadLine();
 
             if (DateTime.TryParse(birthday, out DateTime birthdateDateTime))
@@ -17,7 +19,7 @@ namespace Calamities
                 TimeSpan age = DateTime.Now - birthdateDateTime;
                 int days, months, years;
                 (days, months, years) = age;
-                Console.WriteLine($"{name} you are {years} years, {months} months, and {days} days old");
+                await Logger.WriteLineAsync($"{name} you are {years} years, {months} months, and {days} days old");
             }
         }
     }
