@@ -1,7 +1,4 @@
-﻿namespace Calamities
+﻿class MyAwaitable
 {
-    class MyAwaitable
-    {
-        public bool EraseBob { get; init; }
-    }
+    public bool EraseBob { get; init; }
 }
