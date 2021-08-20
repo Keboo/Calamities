@@ -15,7 +15,9 @@ namespace Calamities
             if (DateTime.TryParse(birthday, out DateTime birthdateDateTime))
             {
                 TimeSpan age = DateTime.Now - birthdateDateTime;
-                Console.WriteLine($"{name} you are {age.TotalDays} days old");
+                int days, months, years;
+                (days, months, years) = age;
+                Console.WriteLine($"{name} you are {years} years, {months} months, and {days} days old");
             }
             else
             {
