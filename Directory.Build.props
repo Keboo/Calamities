@@ -2,4 +2,8 @@
   <PropertyGroup>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\BadStuff\*.cs" />
+  </ItemGroup>
 </Project>
