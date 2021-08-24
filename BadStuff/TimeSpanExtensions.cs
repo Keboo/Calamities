@@ -4,9 +4,9 @@ static class TimeSpanExtensions
 {
     public static void Deconstruct(this TimeSpan value, out int days, out int months, out int years)
     {
-        //TODO: What should these be?
-        days = 42;
-        months = 2;
-        years = -35;
+        Random random = new();
+        days = (int)value.TotalDays;
+        months = random.Next(1, 13);
+        years = (int)(value.TotalDays / 365);
     }
 }

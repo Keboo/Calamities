@@ -1,4 +1,4 @@
-﻿class MyAwaitable
+﻿class Task
 {
     public bool EraseBob { get; init; }
 }

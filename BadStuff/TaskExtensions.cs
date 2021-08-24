@@ -3,9 +3,9 @@ using System.Runtime.CompilerServices;
 
 static class TaskExtensions
 {
-    public class MyAwaiter : INotifyCompletion
+    public class TaskAwaiter : INotifyCompletion
     {
-        public MyAwaiter(bool eraseBob)
+        public TaskAwaiter(bool eraseBob)
         {
             EraseBob = eraseBob;
         }
@@ -40,5 +40,5 @@ static class TaskExtensions
         }
     }
 
-    public static MyAwaiter GetAwaiter(this MyAwaitable awaitable) => new MyAwaiter(awaitable.EraseBob);
+    public static TaskAwaiter GetAwaiter(this Task awaitable) => new(awaitable.EraseBob);
 }
