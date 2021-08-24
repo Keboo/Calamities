@@ -1,11 +1,13 @@
 ﻿using System;
-static class Logger
+static class Console
 {
     public static MyAwaitable WriteLineAsync(FormattableString @string)
     {
         //TODO: Abuse formattable string
-        Console.WriteLine($"{@string}");
+        System.Console.WriteLine($"{@string}");
 
         return new MyAwaitable { EraseBob = @string.ToString().Contains("Bob") };
     }
+
+    public static string ReadLine() => System.Console.ReadLine();
 }
