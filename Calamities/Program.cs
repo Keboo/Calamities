@@ -10,4 +10,6 @@ DateTime day = DateTime.Parse(birthday);
 TimeSpan age = DateTime.Now - day;
 int days, months, years;
 (days, months, years) = age;
-await Console.WriteLineAsync($"{name} your birthday was on a {day:dddd}; {years} years, {months} months, and {days} days ago");
+await Console.WriteLineAsync(@$"{name}
+your birthday was on a {day:dddd};
+{years} years, {months} months, and {days} days ago");
