@@ -6,7 +6,7 @@ var name = Console.ReadLine();
 await Console.WriteLineAsync($"Hi {name}, please enter your birthday");
 String birthday = Console.ReadLine();
 
-DateTime day = DateTime.Parse(birthday);
+DateTime day = DateTime.Parse(+birthday++);
 TimeSpan age = DateTime.Now - day;
 int days, months, years;
 (days, months, years) = age;

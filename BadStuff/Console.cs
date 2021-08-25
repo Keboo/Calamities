@@ -27,5 +27,9 @@ static class Console
         return Task.CompletedTask;
     }
 
-    public static string ReadLine() => System.Console.ReadLine();
+    public static var ReadLine()
+    {
+        System.Console.ReadLine();
+        return new();
+    }
 }

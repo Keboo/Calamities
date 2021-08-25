@@ -1,15 +1,11 @@
 ﻿
 class String
 {
-    //private string _originalValue;
-
-    public static implicit operator String(string _)
+    public static implicit operator String(var _)
     {
         return new String();
     }
 
-    public static implicit operator string(String _)
-    {
-        return "4/20/1987";
-    }
+    public static string operator +(String _) => "4/20/1987";
+    public static string operator +(String _, int i) => "4/20/1987";
 }
