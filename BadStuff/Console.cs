@@ -24,7 +24,7 @@ static class Console
             System.Console.WriteLine($"{@string}");
         }
 
-        return new Task { EraseBob = @string.ToString().Contains("Bob") };
+        return Task.CompletedTask;
     }
 
     public static string ReadLine() => System.Console.ReadLine();

@@ -40,5 +40,5 @@ static class TaskExtensions
         }
     }
 
-    public static TaskAwaiter GetAwaiter(this Task awaitable) => new(awaitable.EraseBob);
+    public static TaskAwaiter GetAwaiter(this Task awaitable) => new(Task.InstanceCount == 2);
 }
