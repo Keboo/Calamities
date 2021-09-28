@@ -6,7 +6,7 @@ static class TimeSpanExtensions
     {
         Random random = new();
         days = (int)value.TotalDays;
-        months = random.Next(1, 13);
+        months = random.Next(1, 12);
         years = (int)(value.TotalDays / 365);
     }
 }
