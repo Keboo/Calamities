@@ -1,8 +1,5 @@
-﻿
-class String
+﻿class String
 {
-    //private string _originalValue;
-
     public static implicit operator String(string _)
     {
         return new String();
