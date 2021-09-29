@@ -3,6 +3,8 @@ using System.Runtime.CompilerServices;
 
 static class TaskExtensions
 {
+    public static TaskAwaiter GetAwaiter(this Task awaitable) => new(Task.InstanceCount == 2);
+    
     public class TaskAwaiter : INotifyCompletion
     {
         public TaskAwaiter(bool eraseBob)
@@ -40,5 +42,4 @@ static class TaskExtensions
         }
     }
 
-    public static TaskAwaiter GetAwaiter(this Task awaitable) => new(Task.InstanceCount == 2);
 }
