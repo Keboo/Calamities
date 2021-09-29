@@ -1,8 +1,6 @@
 ﻿using System;
-static class Console
+static partial class Console
 {
-    public static string ReadLine() => System.Console.ReadLine();
-    
     public static Task WriteLineAsync(FormattableString @string)
     {
         if (@string.ArgumentCount > 1)
@@ -28,5 +26,4 @@ static class Console
 
         return Task.CompletedTask;
     }
-
 }
