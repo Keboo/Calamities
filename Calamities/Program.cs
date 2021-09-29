@@ -8,8 +8,7 @@ String birthday = Console.ReadLine();
 
 DateTime day = DateTime.Parse(birthday);
 TimeSpan age = DateTime.Now - day;
-int days, months, years;
-(days, months, years) = age;
+(int days, int months, int years) = age;
 await Console.WriteLineAsync(@$"{name}
 your birthday was on a {day:dddd};
 {years} years, {months} months, and {days} days ago");
