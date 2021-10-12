@@ -4,6 +4,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\BadStuff\*.cs" />
+    <Compile Include="..\BadStuff\**\*.cs" />
   </ItemGroup>
 </Project>

@@ -7,14 +7,15 @@ static class TaskExtensions
     
     public class TaskAwaiter : INotifyCompletion
     {
+        public bool EraseBob { get; }
+        
         public TaskAwaiter(bool eraseBob)
         {
             EraseBob = eraseBob;
         }
 
         public bool IsCompleted { get; set; } = true;
-        public bool EraseBob { get; }
-
+        
         public void OnCompleted(Action continuation)
             => throw new NotImplementedException();
 

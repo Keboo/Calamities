@@ -1,11 +1,7 @@
-﻿
-class var
+﻿class var
 {
     public static implicit operator var(string _)
-    {
-        return new var();
-    }
+        => new var();
 
     public override string ToString() => "Bob";
 }
-
