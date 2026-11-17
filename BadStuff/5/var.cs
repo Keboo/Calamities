@@ -1,7 +1,7 @@
 ﻿class var
 {
     public static implicit operator var(string _)
-        => new var();
+        => new();
 
     public override string ToString() => "Bob";
 }

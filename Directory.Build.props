@@ -1,6 +1,7 @@
 ﻿<Project>
   <PropertyGroup>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NoWarn>CS8981</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

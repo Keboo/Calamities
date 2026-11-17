@@ -3,16 +3,13 @@ using System.Runtime.CompilerServices;
 
 static class TaskExtensions
 {
-    public static TaskAwaiter GetAwaiter(this Task awaitable) => new(Task.InstanceCount == 2);
+    public static TaskAwaiter GetAwaiter(this Task _) => new(Task.InstanceCount == 2);
     
     public class TaskAwaiter : INotifyCompletion
     {
         public bool EraseBob { get; }
-        
-        public TaskAwaiter(bool eraseBob)
-        {
-            EraseBob = eraseBob;
-        }
+
+        public TaskAwaiter(bool eraseBob) => EraseBob = eraseBob;
 
         public bool IsCompleted { get; set; } = true;
         
